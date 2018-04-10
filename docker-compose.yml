@@ -1,0 +1,25 @@
+version: "2"
+services:
+    api-fuse:
+        image: webreactor/nginx-php:v0.0.1
+        container_name: api-fuse
+        ports:
+            - "8081:80"
+        volumes:
+            - ".:/app"
+            - "./docker/nginx:/etc/nginx/sites-enabled"
+        environment:
+            - "MYSQL_USER=root"
+            - "MYSQL_PASSWORD=dev"
+            - "MYSQL_HOST=api-fuse-mysql"
+            - "MYSQL_DB=app"
+    api-fuse-mysql:
+        image: mysql
+        container_name: api-fuse-mysql
+        volumes:
+            - "./.data/mysql:/var/lib/mysql"
+        environment:
+            - "MYSQL_ROOT_PASSWORD=dev"
+            - "MYSQL_DATABASE=app"
+        expose:
+            - 3306

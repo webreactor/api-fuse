@@ -1,0 +1,28 @@
+{
+    "name": "api-fuse",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Reactor\\APIFuse\\": "src/common"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/webreactor/cli-arguments.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webreactor/http-client.git"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/webreactor/db-driver.git"
+        }
+    ],
+    "require": {
+        "webreactor/cli-arguments": "dev-master",
+        "webreactor/http-client": "dev-master",
+        "webreactor/db-driver": "dev-master"
+    }
+}

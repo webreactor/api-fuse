@@ -1,0 +1,29 @@
+# Path to migration scripts
+# migrations: db-migrations
+
+# Database host
+host: $MYSQL_HOST
+
+# Database port
+# port: 3306
+
+# Path to socket, has higher priority than host
+# unix_socket: /var/run/mysqld/mysqld.sock
+
+# Database user
+user: $MYSQL_USER
+
+# Database password
+password: $MYSQL_PASSWORD
+
+# Database name
+database: $MYSQL_DB
+
+# Creates db if not exists
+# create-database: yes
+
+# Table name for migration state
+# table: db_migrations
+
+# Extra parameters will bepassed to load a migration command
+# extra: ~
